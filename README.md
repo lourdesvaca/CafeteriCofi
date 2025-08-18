@@ -2,8 +2,7 @@
 Repositorio proyecto grupal Cafeteria Cofi
 
 ## Integrantes:
-Jael
-Allison
-Manelly
-Erika
+Jael,
+Allison,
+Manelly,
 Lourdes
