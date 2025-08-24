@@ -13,6 +13,98 @@
 
 <body>
   <div class="container">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COFI</title>
+  <link rel="icon" href="./images/title logo-1.png">
+  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    
+    <!-- Mensaje de bienvenida -->
+    <div id="bienvenida" class="bienvenida">
+      <h2>¡Bienvenido a COFI!</h2>
+      <p>Gracias por visitarnos, aquí encontrarás lo que necesitas.</p>
+      <button onclick="cerrarBienvenida()">Cerrar</button>
+    </div>
+
+  </div>
+
+  <script>
+    // Mostrar el mensaje al cargar solo la primera vez
+    window.onload = function() {
+      if (!localStorage.getItem("bienvenidaMostrada")) {
+        document.getElementById("bienvenida").style.display = "block";
+        localStorage.setItem("bienvenidaMostrada", "true");
+      }
+    };
+
+    // Función para cerrar el mensaje
+    function cerrarBienvenida() {
+      document.getElementById("bienvenida").style.display = "none";
+    }
+  </script>
+
+  <style>
+    /* Paleta de colores */
+    :root {
+      --lemon: #EDEDBF;
+      --sage: #A3B18A;
+      --coffee: #6F4E37;
+      --black: #000000;
+    }
+
+    body {
+      background-color: var(--lemon); /* Fondo suave */
+      color: var(--black);           /* Texto en negro */
+      font-family: Arial, sans-serif;
+    }
+
+    .bienvenida {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--sage); /* Color de fondo Sage */
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+      text-align: center;
+      z-index: 9999;
+      max-width: 350px;
+    }
+
+    .bienvenida h2 {
+      margin-bottom: 10px;
+      color: var(--coffee); /* Título en marrón */
+    }
+
+    .bienvenida p {
+      color: var(--black);
+    }
+
+    .bienvenida button {
+      margin-top: 15px;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: var(--coffee); /* Botón marrón */
+      color: var(--lemon);
+      cursor: pointer;
+    }
+
+    .bienvenida button:hover {
+      background-color: var(--black); /* Hover en negro */
+      color: var(--lemon);
+    }
+  </style>
+</body>
 
     <!-------------------- header starts -------------------------->
     <header>
